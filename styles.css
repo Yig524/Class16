@@ -355,3 +355,44 @@ body.dark-mode .media-body {
 #darkModeToggle:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+/* 乱跑图片样式 */
+.bouncing-image {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+}
+
+.bouncing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bouncing-text {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  padding: 4px 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dark-mode .bouncing-text {
+  color: #fff;
+}
+
+.bouncing-text.show {
+  opacity: 1;
+}
